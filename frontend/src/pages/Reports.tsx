@@ -1,0 +1,1 @@
+export default function Reports() { return <div className='p-6 h-full bg-white rounded-xl shadow-sm'><h2 className='text-2xl font-bold'>Reports & Documents</h2><p className='text-slate-500 mt-2'>Access DDR, WCR, and other technical reports.</p></div>; }

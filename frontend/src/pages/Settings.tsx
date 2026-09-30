@@ -1,0 +1,1 @@
+export default function Settings() { return <div className='p-6 h-full bg-white rounded-xl shadow-sm'><h2 className='text-2xl font-bold'>Settings</h2><p className='text-slate-500 mt-2'>Configure NWIS preferences, units, and role.</p></div>; }

@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  db:
+    build:
+      context: ./database/docker
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-ertmac_nwis}
+      POSTGRES_USER: ${POSTGRES_USER:-nwis_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-nwis_pass}
+    ports:
+      - "5435:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    restart: unless-stopped
+
+volumes:
+  pgdata:
